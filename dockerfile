@@ -6,7 +6,9 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 # and install dependencies
 RUN apt-get update \
     && apt-get install -y curl \
-    && apt-get -y autoclean
+    && apt-get install git
+    && apt-get install ssh
+    && apt-get install openssh-client
 
 # nvm environment variables
 ENV NVM_DIR /usr/local/nvm
