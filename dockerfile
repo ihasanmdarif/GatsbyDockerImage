@@ -7,7 +7,8 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update \
     && apt-get install -y curl \
     && apt-get install git -y \
-    && apt-get install openssh-client -y
+    && apt-get install openssh-client -y \
+    && apt-get install rsync -y
 
 # nvm environment variables
 ENV NVM_DIR /usr/local/nvm
